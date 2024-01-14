@@ -1,0 +1,46 @@
+﻿@page
+@model ProiectMedii.Pages.Adrese.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Adresa</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa.Strada)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa.Strada)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa.Numar)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa.Numar)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa.Oras)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa.Oras)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa.Judet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa.Judet)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Adresa.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

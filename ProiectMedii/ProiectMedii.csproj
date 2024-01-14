@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Index.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Adrese\Create.cshtml" />
+    <None Include="Pages\Adrese\Delete.cshtml" />
+    <None Include="Pages\Adrese\Details.cshtml" />
+    <None Include="Pages\Adrese\Edit.cshtml" />
+    <None Include="Pages\Adrese\Index.cshtml" />
+    <None Include="Pages\Membrii\Create.cshtml" />
+    <None Include="Pages\Membrii\Delete.cshtml" />
+    <None Include="Pages\Membrii\Details.cshtml" />
+    <None Include="Pages\Membrii\Edit.cshtml" />
+    <None Include="Pages\Membrii\Index.cshtml" />
+    <None Include="Pages\Recenzii\Create.cshtml" />
+    <None Include="Pages\Recenzii\Delete.cshtml" />
+    <None Include="Pages\Recenzii\Details.cshtml" />
+    <None Include="Pages\Recenzii\Edit.cshtml" />
+    <None Include="Pages\Recenzii\Index.cshtml" />
+    <None Include="Pages\Restaurante\Create.cshtml" />
+    <None Include="Pages\Restaurante\Delete.cshtml" />
+    <None Include="Pages\Restaurante\Details.cshtml" />
+    <None Include="Pages\Restaurante\Edit.cshtml" />
+    <None Include="Pages\Restaurante\Index.cshtml" />
+    <None Include="Pages\Rezervari\Create.cshtml" />
+    <None Include="Pages\Rezervari\Delete.cshtml" />
+    <None Include="Pages\Rezervari\Details.cshtml" />
+    <None Include="Pages\Rezervari\Edit.cshtml" />
+    <None Include="Pages\Rezervari\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.23" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.23">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+</Project>

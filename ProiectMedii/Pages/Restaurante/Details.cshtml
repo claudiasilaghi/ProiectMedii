@@ -1,0 +1,55 @@
+﻿@page
+@model ProiectMedii.Pages.Restaurante.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Restaurant</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Restaurant.Nume)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Restaurant.Nume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.LabelFor(model => model.Restaurant.Adresa.Strada,"Strada")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Restaurant.Adresa.Strada)
+        </dd>
+  <dt class="col-sm-2">
+            @Html.LabelFor(model => model.Restaurant.Adresa.Numar,"Numar")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Restaurant.Adresa.Numar)
+        </dd>
+          <dt class="col-sm-2">
+            @Html.LabelFor(model => model.Restaurant.Adresa.Oras,"Oras")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Restaurant.Adresa.Oras)
+        </dd>
+          <dt class="col-sm-2">
+            @Html.LabelFor(model => model.Restaurant.Adresa.Judet,"Judet")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Restaurant.Adresa.Judet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Restaurant.Rating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Restaurant.Rating)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Restaurant?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

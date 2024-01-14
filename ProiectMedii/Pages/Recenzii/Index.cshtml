@@ -1,0 +1,51 @@
+﻿@page
+@model ProiectMedii.Pages.Recenzii.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.LabelFor(model => model.Recenzie[0].Restaurant.Nume,"Restaurant")
+            </th>
+            <th>
+                Locatie
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Recenzie[0].Parere)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Recenzie) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Restaurant.Nume)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Restaurant.Adresa.Strada)
+                    @Html.DisplayFor(modelItem => item.Restaurant.Adresa.Numar),
+                    @Html.DisplayFor(modelItem => item.Restaurant.Adresa.Oras),
+                    @Html.DisplayFor(modelItem => item.Restaurant.Adresa.Judet)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Parere)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

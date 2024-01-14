@@ -1,0 +1,54 @@
+﻿@page
+@model ProiectMedii.Pages.Rezervari.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Rezervare</h4>
+    <hr />
+    <dl class="row">
+         <dt class="col-sm-2">
+            @Html.LabelFor(model => model.Rezervare.Membru.Numetot,"Nume")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rezervare.Membru.Numetot)
+        </dd>
+         <dt class="col-sm-2">
+            @Html.LabelFor(model => model.Rezervare.Restaurant.Nume,"Restaurant")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rezervare.Restaurant.Nume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.LabelFor(model => model.Rezervare.Restaurant.AdresaID,"Locatie")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rezervare.Restaurant.Adresa.Strada)
+            @Html.DisplayFor(model => model.Rezervare.Restaurant.Adresa.Numar), 
+
+            @Html.DisplayFor(model => model.Rezervare.Restaurant.Adresa.Oras),
+
+            @Html.DisplayFor(model => model.Rezervare.Restaurant.Adresa.Judet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rezervare.Persoane)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rezervare.Persoane)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rezervare.Data)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rezervare.Data)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Rezervare?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

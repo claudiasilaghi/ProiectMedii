@@ -1,0 +1,50 @@
+﻿@page
+@model ProiectMedii.Pages.Adrese.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Adresa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Adresa.ID" />
+            <div class="form-group">
+                <label asp-for="Adresa.Strada" class="control-label"></label>
+                <input asp-for="Adresa.Strada" class="form-control" />
+                <span asp-validation-for="Adresa.Strada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adresa.Numar" class="control-label"></label>
+                <input asp-for="Adresa.Numar" class="form-control" />
+                <span asp-validation-for="Adresa.Numar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adresa.Oras" class="control-label"></label>
+                <input asp-for="Adresa.Oras" class="form-control" />
+                <span asp-validation-for="Adresa.Oras" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adresa.Judet" class="control-label"></label>
+                <input asp-for="Adresa.Judet" class="form-control" />
+                <span asp-validation-for="Adresa.Judet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

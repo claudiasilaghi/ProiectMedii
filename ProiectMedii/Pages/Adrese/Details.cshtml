@@ -1,0 +1,43 @@
+﻿@page
+@model ProiectMedii.Pages.Adrese.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Adresa</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa.Strada)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa.Strada)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa.Numar)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa.Numar)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa.Oras)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa.Oras)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa.Judet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa.Judet)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Adresa?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

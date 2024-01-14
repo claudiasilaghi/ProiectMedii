@@ -1,0 +1,51 @@
+﻿@page
+@model ProiectMedii.Pages.Rezervari.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Rezervare</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Rezervare.ID" />
+            <div class="form-group">
+                <label asp-for="Rezervare.MembruID" class="control-label">Nume</label>
+                <select asp-for="Rezervare.MembruID" class="form-control" asp-items="ViewBag.MembruID"></select>
+                <span asp-validation-for="Rezervare.MembruID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rezervare.RestaurantID" class="control-label">Restaurant</label>
+                <select asp-for="Rezervare.RestaurantID" class="form-control" asp-items="ViewBag.RestaurantID">
+                </select>
+                <span asp-validation-for="Rezervare.RestaurantID" class="text-danger"></span>
+ </div>
+            <div class="form-group">
+                <label asp-for="Rezervare.Persoane" class="control-label"></label>
+                <input asp-for="Rezervare.Persoane" class="form-control" />
+                <span asp-validation-for="Rezervare.Persoane" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rezervare.Data" class="control-label"></label>
+                <input asp-for="Rezervare.Data" class="form-control" />
+                <span asp-validation-for="Rezervare.Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
